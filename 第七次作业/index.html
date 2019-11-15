@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>第七次作业</title>
+		<style>
+			.container{
+				
+				display: flex;
+				background-color: white ;
+				height: 100%;
+				width: 50%;
+				margin: 0 auto;
+				flex-wrap: wrap;
+				justify-content:space-around;
+			}
+			.item1{
+				height: 370px;
+				width: 200px;
+				background-color: white;
+				margin: 5px;
+				padding: 4px;
+				border: 3px solid white;
+				text-align: center;
+				text-decoration: none;
+			}
+			
+			#item:hover{
+				
+				border: 0px solid black;
+				-webkit-animation: item 5s infinite;
+				animation: item 5s infinite;
+			}
+			.item1:hover{
+				border: 3px solid red;
+			}
+			.item2:hover{
+				border: 3px solid red;
+			}
+			@media (min-width:80%) {
+				.item1{
+					width: 100%;
+				}
+				.item2{
+					flex-wrap: wrap;
+				}
+				
+				img{
+					width: 100%;
+				}
+			}
+			@-webkit-keyframes item{
+			    50% {border-bottom-width: 50px;}
+			}
+			
+			
+			@keyframes item{
+			    50% {border-bottom-width: 50px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="boxtop">
+			<img src="img/QQ图片20191115085632.png" width="100%" />
+		</div>
+		<div class="container">
+			<div class="item1"><a href="#"><img src="img/图片2.png" width="200px" >及第粥</a></div>
+			<div class="item1"><a href="#"><img src="img/图片3.png" width="200px" >虾饺</a></div>
+			<div class="item1"><a href="#"><img src="img/图片4.png" width="200px" >肠粉</a></div>
+					
+					
+			<div class="item1"><a href="#"><img src="img/图片5.png" width="200px" >干炒牛河粉</a></div>
+			<div class="item1"><a href="#"><img src="img/图片6.png" width="200px" >姜汁撞奶</a></div>
+			<div class="item1"><a href="#"><img src="img/图片7.png" width="200px" >糯米鸡</a></div>
+		</div>
+			
+		
+	</body>
+</html>
