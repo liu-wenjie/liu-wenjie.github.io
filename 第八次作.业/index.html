@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>我的第八次作业</title>
+		<style>
+			.top{
+				height: 50px;
+				width: 100%;
+				
+			}
+			.box1{
+				float: left;
+				margin: 0 auto;
+			}
+			.box2{
+				float: left;
+				margin-left: 50px;
+				margin: 0 auto;
+			}
+			.box3{
+				float: ;
+			}
+			table{
+				border-collapse: collapse;
+				text-align: center;
+			}
+			td{
+				width: 100px;
+			}
+			.qingkong:hover{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="box1">
+			<p style="size: a5;">姓名:<input type="text" id="name" /></p>
+			</div>
+			<div class="box2">
+				<p style="size: a5;">学号:<input type="text" id="number" /> </p>
+			</div>
+		</div>
+		<br /><br /><br />
+		<input type="button" value="增加" id="ti" onclick="addChild()" />
+		<table border="1" id="t1">
+			<tr>
+				<td>姓名</td>
+				<td>学号</td>
+				<td><a onclick="doempty()" href="" class="qingkong">清空</a></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			var count = 0;
+
+			function addChild() {
+				var x = document.createElement("tr");
+				var t1 = document.getElementById("t1");
+				var n1 = document.getElementById("name").value;
+				var n2 = document.getElementById("number").value;
+				t1.innerHTML +=
+					"<tr id=" + count + ">" + "<td>" + n1 + "</td>" + "<td>" + n2 + "</td>" + '<td><a href="javascript:s(' + count +
+					')">' + "删除" + "</a></td>" + "</tr>";
+				count++;
+			}
+
+			function shanchu(count) {
+				var row = document.getElementById(count);
+				row.remove(count);
+			}
+			function doempty() {
+				var all;
+				for (; count > 0; count--) {
+					all = document.getElementById(count);
+					all.remove(count);
+				}
+			}
+		</script>
+	</body>
+</html>
